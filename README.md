@@ -55,7 +55,6 @@ Bu proje **Flutter** kullanılarak geliştirilmiştir.
 ## 👤 Geliştirici
 
 **E. Emre KIRIK**
-*Harita Mühendisi & Yazılım Geliştirici*
 
 ---
 
