@@ -1,0 +1,34 @@
+name: mobil_donusum_app
+description: "Mobil Koordinat Dönüşüm ve Coğrafi Hesaplama Uygulaması"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Harita ve Projeksyon
+  flutter_map: ^6.0.0
+  latlong2: ^0.9.0
+  proj4dart: ^2.1.0
+  
+  # Dosya ve Sistem
+  file_picker: ^6.0.0
+  path_provider: ^2.1.0
+  
+  # Matematik ve Hesaplama (m0 hesabı için)
+  ml_linalg: ^13.0.0
+  
+  # UI/UX Yardımcıları
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
