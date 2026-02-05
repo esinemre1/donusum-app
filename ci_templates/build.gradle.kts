@@ -7,7 +7,7 @@ plugins {
 android {
     namespace = "com.emrekirik.donusum"
     compileSdk = 34
-    ndkVersion = flutter.ndkVersion
+    // ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
