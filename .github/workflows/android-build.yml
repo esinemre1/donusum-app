@@ -23,7 +23,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          # flutter-version: '3.19.0' # Removed to use latest stable
+          flutter-version: '3.19.0' # Pinned for stability with Java 17 / Gradle 8.4
           cache: true
 
       - name: Fix Gradle Permissions and Line Endings
