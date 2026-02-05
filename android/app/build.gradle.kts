@@ -7,8 +7,8 @@ plugins {
 
 android {
     namespace = "com.emrekirik.donusum"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    compileSdk = 34
+    ndkVersion = "25.1.8937393" // Standard NDK version
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -22,7 +22,7 @@ android {
     defaultConfig {
         applicationId = "com.emrekirik.donusum"
         minSdk = 21
-        targetSdk = flutter.targetSdkVersion
+        targetSdk = 34
         versionCode = 1
         versionName = "1.5.0"
     }
