@@ -26,6 +26,9 @@ jobs:
           # flutter-version: '3.19.0' # Removed to use latest stable
           cache: true
 
+      - name: Fix Gradle Permissions
+        run: chmod +x android/gradlew
+
       - name: Create local.properties
         run: echo "flutter.sdk=$FLUTTER_ROOT" > android/local.properties
 

@@ -8,7 +8,8 @@ plugins {
 android {
     namespace = "com.emrekirik.donusum"
     compileSdk = 34
-    ndkVersion = "25.1.8937393" // Standard NDK version
+    compileSdk = 34
+    // ndkVersion = "25.1.8937393" // Let AGP decide
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
