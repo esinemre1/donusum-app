@@ -7,8 +7,9 @@ plugins {
 
 android {
     namespace = "com.emrekirik.donusum"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    namespace = "com.emrekirik.donusum"
+    compileSdk = 34
+    // ndkVersion = flutter.ndkVersion // Disable strict NDK requirement
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -25,7 +26,7 @@ android {
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = 21
-        targetSdk = flutter.targetSdkVersion
+        targetSdk = 34
         versionCode = 1
         versionName = "1.5.0"
     }
