@@ -26,17 +26,18 @@ jobs:
           # flutter-version: '3.19.0' # Unpinned to align with Gradle 8.14+ jar
           cache: true
 
-      - name: Fix Gradle Permissions and Line Endings
+      - name: Regenerate Android Project (CI Native)
         run: |
+          rm -rf android
+          flutter create . --platforms=android
+          
+      - name: Apply Custom Configurations
+        run: |
+          cp ci_templates/build.gradle.kts android/app/build.gradle.kts
+          cp ci_templates/AndroidManifest.xml android/app/src/main/AndroidManifest.xml
+          # Ensure executable permissions for the FRESHLY generated gradlew
           chmod +x android/gradlew
-          sed -i 's/\r$//' android/gradlew
-
-      - name: Create local.properties
-        run: echo "flutter.sdk=$FLUTTER_ROOT" > android/local.properties
-
-      - name: Install Dependencies
-        run: flutter pub get
-
+          
       - name: Build APK (Debug)
         run: flutter build apk --debug
 
