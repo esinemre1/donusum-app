@@ -1,4 +1,4 @@
-package com.example.mobil_donusum_app
+package com.emrekirik.donusum
 
 import io.flutter.embedding.android.FlutterActivity
 
