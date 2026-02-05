@@ -23,7 +23,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          flutter-version: '3.19.0' # Using a specific stable version for consistency, or 'any'
+          # flutter-version: '3.19.0' # Removed to use latest stable
           cache: true
 
       - name: Install Dependencies
