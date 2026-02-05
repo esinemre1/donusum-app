@@ -4,14 +4,14 @@
 ![Build Status](https://img.shields.io/github/actions/workflow/status/esinemre1/donusum-app/android-build.yml?style=flat-square&label=Build)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
-**DONUSUM**, Harita Mühendisleri ve CBS uzmanları için geliştirilmiş, profesyonel bir mobil koordinat dönüşüm ve görüntüleme aracıdır. **ED50** ve **ITRF96** datumları arasında, Türkiye'nin kullandığı **3 derecelik (TM)** dilim sistemine tam uyumlu dönüşümler yapar.
+**DONUSUM**, Harita Mühendisleri ve CBS uzmanları için geliştirilmiş,  mobil koordinat dönüşüm ve görüntüleme aracıdır. **ED50** ve **ITRF96** datumları arasında, Türkiye'nin kullandığı **3 derecelik (TM)** dilim sistemine tam uyumlu dönüşümler yapar.
 
 ---
 
 ## 🚀 Özellikler
 
 ### 📍 Gelişmiş Koordinat Dönüşümü
-- **Otomatik Algılama:** Yüklenen `.dns` dosyasının adından dönüşüm yönünü (ED50→ITRF veya ITRF→ED50) akıllıca tespit eder.
+- **Otomatik Algılama:** Yüklenen `.dns` dosyasının adından dönüşüm yönünü (ED50→ITRF veya ITRF→ED50) akıllıca tespit eder (GELİŞTİRME AŞAMASINDA).
 - **Hassas Projeksiyon:** Türkiye için özel parametreler (Zone 27-45) ve **towgs84** datum dönüşüm parametreleri ile cm mertebesinde hassasiyet (kontrol noktalarına bağlı olarak).
 - **Affine Dönüşümü:** Kontrol noktaları üzerinden Affine dönüşümü uygulayarak yerel uyuşmazlıkları giderir.
 
