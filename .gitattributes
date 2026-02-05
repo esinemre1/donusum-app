@@ -1,0 +1,7 @@
+*.dart text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+gradlew text eol=lf
+*.bat text eol=crlf
+*.properties text eol=lf
