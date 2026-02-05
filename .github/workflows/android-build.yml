@@ -8,38 +8,32 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/cirruslabs/flutter:3.19.0 # Guaranteed Environment: Flutter 3.19 + Java + Android SDK pre-configured
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'zulu'
-          java-version: '21'
+      - name: Fix Directory Permissions
+        run: |
+          git config --global --add safe.directory '*'
+          chmod -R 777 .
 
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
-          # flutter-version: '3.19.0' # Unpinned to align with Gradle 8.14+ jar
-          cache: true
-
-      - name: Regenerate Android Project (Native Config)
+      - name: Regenerate Android Project (Container Native)
         run: |
           rm -rf android
-          # Generate natively with correct package name (com.emrekirik.donusum) and app name
+          # Generate with pinned Flutter 3.19 inside the container
           flutter create . --platforms=android --org com.emrekirik --project-name donusum
           
       - name: Apply Manifest Overrides
         run: |
-          # Only copy Manifest for permissions/label - Leave build.gradle NATIVE to Flutter 3.19
           cp ci_templates/AndroidManifest.xml android/app/src/main/AndroidManifest.xml
-          
-          # Fix gradlew permissions (Standard Linux fix)
           chmod +x android/gradlew
-          
+
+      - name: Install Dependencies
+        run: flutter pub get
+
       - name: Build APK (Debug)
         run: flutter build apk --debug
 
